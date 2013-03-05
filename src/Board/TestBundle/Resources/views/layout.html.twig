@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Test Bundle{% endblock %}</title>
+        <link/>
+        <link rel="stylesheet" href="{{ asset('bundles/boardtest/css/test.css') }}" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+            </div>
+
+            {% block content_header %}
+                <ul id="menu">
+                    {% block content_header_more %}
+                    {% endblock %}
+                </ul>
+
+                <div style="clear: both"></div>
+            {% endblock %}
+
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>      
+        </div>
+    </body>
+</html>
